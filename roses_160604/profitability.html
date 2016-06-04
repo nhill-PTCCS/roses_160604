@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Profitability</title>
+</head>
+	
+<body>
+    <div class="container">
+        
+		<label>The Rose Problem</label>
+		<br/>
+        <label>Days worked.</label>
+        <input type="number" id="daysSelling" />
+        <button onclick="salesNumbs">Results</button>
+        
+		<div id="getNumbs"> </div>
+		
+    </div>
+	
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+
+<script>
+//outlined variables
+var roseCost = 60;
+var rosesStartTotal = 120;
+var retailRose = 2.0;
+var balance = 200;
+var dayNeg = 0;
+var dayPos = 0;
+var profit = 0;  
+   
+//function called salesNumbs, takes in nothing and returns nothing
+function salesNumbs()
+{
+  
+//variable daysSelling is equal to the element with id daysSelling	
+var daysSelling = document.getElementById('daysSelling').value; 
+
+//variable content is equal to and empty string
+var content ='';
+
+//for loop where var i is equal to 0, i is less than daysSelling and increments i
+for(var i=0; i<daysSelling; i++){
+
+//returns number of the day plus one
+day = i+1;
+	
+//content to be displayed on screen
+content += 'Bank Balance'+' - $'+balance;
+content += '<br/>';       
+content += 'Roses Sold Today: '+getSold;    
+content += '<br/>';
+content += 'Profit'+' - '+profit;
+content += '<br/>';    
+content += '';
+content += '<br/>';        
+content += '';
+
+}
+
+//element with id getNumbs will display content
+document.getElementById('getNumbs').innerHTML = content;
+
+}
+
+//the function salesPerDay takes in no parameters and 
+function salesPerDay(){
+//declares variable sales is equal to a random number
+var sales = Math.floor(Math.floor() * (max - min)) + min;
+//and returns sales numbers
+return sales;
+}
+
+//the function dailyProfit takes in nothing and
+function dailyProfit(){
+//declares variable rosesSold is equal to salesNumbs	
+var rosesSold = salesNumbs();
+//declares variable profit is equal to rosesSold multiplie by 2
+var profit = rosesSold * 2;
+	
+
+}
+//the function getSold takes in nothing and 
+function getSold()
+{
+//declares variable min is equal to 10, the min number of roses to sell in a day
+var min = 10;
+//declares variable max is equal to 120, the max number of roses to sell in a day
+var max = 120;
+
+}
+    
+</script>
+	
+</body>
+</html>
